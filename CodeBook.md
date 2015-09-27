@@ -1,16 +1,3 @@
-# CleaningDataProject
-Project results for Coursera "Getting and cleaning data"
-
-There is only one script "run_analysis.R" which does everything:
-
-* Read in the data files
-* Combine them
-* Cleans up the data frame
-* Summarizes data frame
-* Output the results
-
-The working details of "run_analysis.R" is already described in "CookBook.md" and is repeated here for completeness.
-
 The data sets used to construct the final data come from these files:
 
 * train/X_train.txt
@@ -66,3 +53,8 @@ Since the strings for "measur" cannot be consistently split into 2 or 3 pieces, 
 #### Output
 
 Use write.table to write "narrow_tidy.df" to a file and drop off the row names.
+
+
+
+
+
