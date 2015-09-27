@@ -16,10 +16,12 @@ The data sets used to construct the final data come from these files:
 * train/X_train.txt
 * train/y_train.txt
 * train/subject_train.txt
+* files in "train/Inertial Signals" subfolder
 
 * test/X_test.txt
 * test/y_train.txt
 * test/subject_test.txt
+* files in "test/Inertial Signals" subfolder
 
 #### Feature names and activity labels
 First the various feature names (signals) are read in from "features.txt".  Similarly for the activity labels, they are read in from "activity_labels.txt".
@@ -32,7 +34,14 @@ I started with the files in the "train" folder
 * y_train.txt is read in as a data-frame with single column.  The column name is renamed to "activity"
 * X_train.txt is read in as a table and converted into a data frame.  Its column names are taken 
 
-The above is combined into a data frame for training data (=train_df)
+For each file in the train/"Inertial Signals" subfolder:
+
+* File is read in as a table, and converted into a data frame
+* The mean of each row is computed, and the list is converted into a data frame with single column for the mean value
+* Column name is assigned with key word "mean" (for later column selection)
+
+All the above is combined into a data frame for training data (=train_df)
+
 
 Same treatment for the files in the "test" folder.  This gives a data frame for test data (=test_df).
 
